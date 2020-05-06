@@ -32,7 +32,32 @@ def fac(a):
     i = i * a
     a -= 1
   return i
-def cal(o, a, b = 0):
+def pll(a, b):
+  #Find the hypotenuse
+  c = a ** 2
+  d = b ** 2
+  e = c + d
+  f = e ** .5
+  return f
+def phl(a, b):
+  #Find the missing leg
+  c = a ** 2
+  d = b ** 2
+  e = c - d
+  f = e ** .5
+  return f
+def qua(a, b, c):
+  #Solve quadratic formula
+  d = b ** 2
+  e = 4 * a * c 
+  f = d - e
+  g = f ** .5
+  ha = - b + g
+  hb = - b - g
+  ia = ha / 2 / a
+  ib = hb / 2 / a
+  return ia, ib
+def cal(o, a, b = 0, c = 0):
   if o == "add":
     return add(a)
   elif o == "sub":
@@ -49,5 +74,11 @@ def cal(o, a, b = 0):
     return roo(a, b)
   elif o == "fac":
     return fac(a)
+  elif o == "pll":
+    return pll(a, b)
+  elif o == "phl":
+    return phl(a, b)
+  elif o == "qua":
+    return qua(a, b, c)
   else:
     return "You didn't give an opperation we have"

@@ -57,6 +57,15 @@ def qua(a, b, c):
   ia = ha / 2 / a
   ib = hb / 2 / a
   return ia, ib
+def irt(a, b, c):
+  #Is it a right triangle
+  d = a ** 2
+  e = b ** 2
+  f = c ** 2
+  if d + e == f:
+    return True
+  else:
+    return False
 def cal(o, a, b = 0, c = 0):
   if o == "add":
     return add(a)
@@ -80,5 +89,8 @@ def cal(o, a, b = 0, c = 0):
     return phl(a, b)
   elif o == "qua":
     return qua(a, b, c)
+  elif o == "irt":
+    return irt(a, b, c)
   else:
     return "You didn't give an opperation we have"
+print(cal("irt", 3, 4, 6))

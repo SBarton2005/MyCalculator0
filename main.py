@@ -2,6 +2,7 @@ def add(a):
   #This is addition
   c = 0
   for b in a:
+    b = int(b)
     c += b
   return c
 def sub(a, b):
@@ -11,6 +12,7 @@ def mul(a):
   #This is multiplication
   c = 1
   for b in a:
+    b = int(b)
     c = c * b
   return c
 def div(a, b):
@@ -93,4 +95,12 @@ def cal(o, a, b = 0, c = 0):
     return irt(a, b, c)
   else:
     return "You didn't give an opperation we have"
-print(cal("irt", 3, 4, 6))
+o = input("Opperation: ")
+if o == "add" or o == "mul":
+  q = input("a: ")
+  a = q.split(" ")  
+else:
+  a = int(input("a: "))
+b = int(input("b: "))
+c = int(input("c: "))
+print(cal(o, a, b, c))

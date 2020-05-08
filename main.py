@@ -100,7 +100,7 @@ if o == "add" or o == "mul":
   q = input("a: ")
   a = q.split(" ")  
 else:
-  a = int(input("a: "))
-b = int(input("b: "))
+  a = float(input("a: "))
+b = float(input("b: "))
 c = int(input("c: "))
 print(cal(o, a, b, c))
